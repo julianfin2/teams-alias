@@ -38,7 +38,7 @@ jobs:
       - name: Package Extension
         run: |
           mkdir -p dist
-          cp manifest.json content.js popup.html popup.js dist/
+          cp manifest.json background.js content.js popup.html popup.js dist/
           cp -R icons dist/icons
           cd dist
           zip -r "../teams-alias-${GITHUB_REF_NAME}.zip" .

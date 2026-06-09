@@ -8,7 +8,7 @@
             background-color: #f9fafb;
             margin: 0;
             padding: 12px;
-            width: 160px;
+            width: 220px;
             color: #111827;
         }
 
@@ -43,6 +43,27 @@
             background-color: #1d4ed8;
         }
 
+        button.secondary {
+            background-color: #4b5563;
+        }
+
+        button.secondary:hover {
+            background-color: #374151;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 6px 8px;
+            margin-top: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #111827;
+            background: white;
+        }
+
         i {
             font-size: 14px;
         }
@@ -65,9 +86,10 @@
 </head>
 <body>
 <h3>Teams 别名管理</h3>
-<input id="fileInput" type="file" accept=".csv,text/csv">
-<button id="import">导入 CSV</button>
-<button id="export">导出</button>
+<input id="syncUrl" type="text" placeholder="Apps Script URL">
+<input id="syncToken" type="password" placeholder="Token">
+<button id="saveSync">保存同步设置</button>
+<button id="syncNow" class="secondary">立即同步</button>
 <div id="status"></div>
 <script src="popup.js"></script>
 </body>

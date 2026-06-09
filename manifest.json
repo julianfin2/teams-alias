@@ -9,10 +9,15 @@
         "128": "icons/teams-alias-128.png"
     },
     "description": "给 Teams 好友设置别名",
-    "permissions": ["storage"],
+    "permissions": ["storage", "alarms"],
     "host_permissions": [
-        "https://teams.live.com/v2*"
+        "https://teams.live.com/v2*",
+        "https://script.google.com/*",
+        "https://script.googleusercontent.com/*"
     ],
+    "background": {
+        "service_worker": "background.js"
+    },
     "content_scripts": [
         {
             "matches": ["https://teams.live.com/v2*"],
